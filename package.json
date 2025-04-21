@@ -1,16 +1,9 @@
 {
-	"name": "notem",
+	"name": "npm-cli-template",
 	"version": "2.1.1",
-	"description": "A lightweight command-line tool for managing notes.",
-	"keywords": [
-		"notem",
-		"cli",
-		"notes",
-		"notes-taking",
-		"notes-manager",
-		"notes-manager-cli"
-	],
-	"repository": "rocktimsaikia/notem",
+	"description": "npm-cli-template",
+	"keywords": ["npm-cli-template", "cli"],
+	"repository": "rocktimsaikia/npm-cli-template",
 	"funding": "https://github.com/sponsors/rocktimsaikia",
 	"license": "MIT",
 	"author": {
@@ -20,7 +13,7 @@
 	},
 	"type": "module",
 	"bin": {
-		"notem": "./dist/cli.js"
+		"npm-cli-template": "./dist/cli.js"
 	},
 	"files": ["dist"],
 	"scripts": {
