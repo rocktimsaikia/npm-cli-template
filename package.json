@@ -1,0 +1,63 @@
+{
+	"name": "notem",
+	"version": "2.1.1",
+	"description": "A lightweight command-line tool for managing notes.",
+	"keywords": [
+		"notem",
+		"cli",
+		"notes",
+		"notes-taking",
+		"notes-manager",
+		"notes-manager-cli"
+	],
+	"repository": "rocktimsaikia/notem",
+	"funding": "https://github.com/sponsors/rocktimsaikia",
+	"license": "MIT",
+	"author": {
+		"name": "Rocktim Saikia",
+		"email": "rocktimthedev@gmail.com",
+		"url": "https://rocktimsaikia.dev"
+	},
+	"type": "module",
+	"bin": {
+		"notem": "./dist/cli.js"
+	},
+	"files": ["dist"],
+	"scripts": {
+		"build": "tsup",
+		"clean": "rm -rf ~/.notes/*",
+		"demo": "tsx src/cli.ts",
+		"format": "biome format --write .",
+		"lint": "biome lint .",
+		"lint:fix": "biome lint --write --unsafe .",
+		"test": "echo \"Error: no test specified\" && exit 0",
+		"release": "np --no-publish"
+	},
+	"dependencies": {
+		"@bomb.sh/args": "^0.3.1",
+		"chalk": "^5.4.1",
+		"dedent": "^1.5.3",
+		"ink": "^5.2.0",
+		"ink-select-input": "^6.1.0",
+		"update-notifier": "^7.3.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@types/node": "^20.17.12",
+		"@types/update-notifier": "^6.0.8",
+		"np": "^10.2.0",
+		"tsup": "^8.3.5",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.3"
+	},
+	"packageManager": "pnpm@10.8.1",
+	"engines": {
+		"node": ">=18"
+	},
+	"tsup": {
+		"entry": ["src/cli.ts"],
+		"minify": true,
+		"clean": true,
+		"format": "esm"
+	}
+}
